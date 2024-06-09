@@ -1,0 +1,189 @@
+{
+	"id": "aef705c1-60cd-4877-b762-3e06468c027f",
+	"name": "ProvaS206",
+	"timestamp": "2024-06-09T20:40:29.422Z",
+	"collection_id": "15166003-f3f1dac7-1940-4e2c-98d5-40885d6129de",
+	"folder_id": 0,
+	"environment_id": "15166003-07b1ac1c-738e-49ff-b83f-6b1aaafcf00e",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-09T20:40:26.500Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a98bc18e-3a2b-47f3-8259-0b1f077ab2a6",
+			"name": "GetUser",
+			"url": "https://gorest.co.in/public/v2/users/6955833",
+			"time": 446,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				446
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "facf7c9f-12a2-4a20-8e84-050e1b33d73b",
+			"name": "AdicionarUsuarioExistente",
+			"url": "https://gorest.co.in/public/v2/users",
+			"time": 477,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {
+				"Resposta é status 422": true,
+				"Tempo de resposta abaixo de 600ms": true,
+				"Mensagem indica que o usuario já existe": true
+			},
+			"testPassFailCounts": {
+				"Resposta é status 422": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta abaixo de 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mensagem indica que o usuario já existe": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				477
+			],
+			"allTests": [
+				{
+					"Resposta é status 422": true,
+					"Tempo de resposta abaixo de 600ms": true,
+					"Mensagem indica que o usuario já existe": true
+				}
+			]
+		},
+		{
+			"id": "80624226-1d51-4d02-bd66-03dc704bb5cb",
+			"name": "AtualizarUsuario",
+			"url": "https://gorest.co.in/public/v2/users/6955849",
+			"time": 504,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Resposta é 200 OK": true,
+				"Resposta tem os campos esperados": true,
+				"Genero e status tem formato esperado": true,
+				"Tempo de resposta abaixo de 600ms": true
+			},
+			"testPassFailCounts": {
+				"Resposta é 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta tem os campos esperados": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Genero e status tem formato esperado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta abaixo de 600ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				504
+			],
+			"allTests": [
+				{
+					"Resposta é 200 OK": true,
+					"Resposta tem os campos esperados": true,
+					"Genero e status tem formato esperado": true,
+					"Tempo de resposta abaixo de 600ms": true
+				}
+			]
+		},
+		{
+			"id": "c3943a75-60d9-4d0f-8d4e-f7cc249e41f8",
+			"name": "DeletarUsuario",
+			"url": "https://gorest.co.in/public/v2/users/6955849",
+			"time": 610,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Resposta é 204": true
+			},
+			"testPassFailCounts": {
+				"Resposta é 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				610
+			],
+			"allTests": [
+				{
+					"Resposta é 204": true
+				}
+			]
+		},
+		{
+			"id": "99462e08-68c2-4055-b4eb-3b64870d8adb",
+			"name": "ListUsers",
+			"url": "https://gorest.co.in/public/v2/users",
+			"time": 446,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				446
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2483,
+	"collection": {
+		"requests": [
+			{
+				"id": "a98bc18e-3a2b-47f3-8259-0b1f077ab2a6",
+				"method": "GET"
+			},
+			{
+				"id": "facf7c9f-12a2-4a20-8e84-050e1b33d73b",
+				"method": "POST"
+			},
+			{
+				"id": "80624226-1d51-4d02-bd66-03dc704bb5cb",
+				"method": "PUT"
+			},
+			{
+				"id": "c3943a75-60d9-4d0f-8d4e-f7cc249e41f8",
+				"method": "DELETE"
+			},
+			{
+				"id": "99462e08-68c2-4055-b4eb-3b64870d8adb",
+				"method": "GET"
+			}
+		]
+	}
+}
